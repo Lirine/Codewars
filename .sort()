@@ -1,0 +1,107 @@
+//sort()
+
+// let names = ['Bob', 'Anna', 'Alice', 'Amelia', 'Annaa']
+// names.sort();
+// console.log(names);
+
+// let arr = [4,2,7,8,1,9,0,2,5];
+// arr = arr.sort();
+// console.log(arr);
+
+// let arr = [31, 12, 3, 5, 139, 22];
+// arr.sort();  //сортируются как строки
+// console.log(arr);
+
+// let arr = [31, 12, 3, 5, 139, 22];
+
+// arr.sort((a, b) => a - b);
+// console.log(arr);
+
+//элементы массива сортируются в соответствии с возвращаемым значением.
+//если значение > 0, элементы a, b меняются местами
+//ЭТО сортировка по возрастанию
+
+// [31, 12, 3, 5, 139, 22];
+// [12, 31, 3, 5, 139, 22];
+// [12, 3, 31, 5, 139, 22];
+// [12, 3, 5, 31, 139, 22];
+// [12, 3, 5, 31, 22, 139];
+// 2:
+// [3, 12, 5, 31, 22, 139];
+// [3, 5, 12, 31, 22, 139];
+// [3, 5, 12, 22, 31, 139];
+
+// let arr = [31, 12, 3, 5, 139, 22];
+
+// arr.sort((a, b) => b - a);
+// console.log(arr);
+// // [31, 12, 5, 3, 139, 22];
+// // [31, 12, 5, 139, 3, 22];
+// // [31, 12, 5, 139, 22, 3];
+// // ..
+
+
+
+// let arr = [31, 12, 3, 5, 139, 22];
+// function compare(a, b){
+//   return a - b
+// }
+// arr.sort(compare);
+// console.log(arr);
+
+// let arr = [['anna', 10], ['bob', 26], ['inna', 14]];
+// //arr.sort() //сортировка по первому параметру(по алфавиту)
+
+// arr.sort((a,b) => a[1] - b[1] ) //сортировка по второму параметру
+// console.log(arr);
+
+
+// let arr = ['grapefruit', 'banana', 'lime', 'apple'];
+// arr.sort((a,b) => a.length - b.length)
+// console.log(arr);
+
+// let arr = ['grapefruit', 'pear', 'banana', 'lime', 'kiwi', 'apple'];
+// arr.sort((a,b) => a.length - b.length)
+// console.log(arr);
+
+//сортировка по двум параметрам
+//сначала по длине слова, а если длины слов равны, то по алфавиту
+
+// let arr = ['grapefruit', 'pear', 'banana', 'lime', 'kiwi', 'apple'];
+
+// // function compare(a, b){
+// //   if (a.length === b.length) {
+// //     if (a > b) return 1;
+// //     else return -1;
+// //   } else {
+// //     return a.length - b.length
+// //   }
+// // }
+// // arr.sort(compare);
+// // console.log(arr);
+
+// let arr = ['grapefruit', 'pear', 'banana', 'lime', 'kiwi', 'apple'];
+// arr.sort((a,b)=>a.length!==b.length ? a.length - b.length : a > b? 1: -1)
+// console.log(arr);
+
+
+// let s = 'Bob Smith'
+// s = s.split(' ')  //["Bob", "Smith"]
+// console.log(s);
+
+// let names = ['Bob Smith', 'Alice Moon', 'Amelia Carter', 'Art Star'];
+// names.sort((a,b)=> a.split(' ')[1] > b.split(' ')[1] ? 1 : -1)
+// console.log(names)
+
+//сортировка строк по последней букве
+// let arr = ['grapefruit', 'pear', 'banana', 'lime', 'kiwi', 'apple'];
+// arr.sort((a,b)=>a[a.length-1] > b[b.length-1] ? 1: -1)
+// console.log(arr);
+
+
+let st = [{name:"Bob", age:25}, {name:"Sam", age:19}, {name:"Alla", age:24}];
+
+st.sort((a,b) => b.age - a.age)
+console.log(st[0]);
+console.log(st[0].age);
+console.log(st[0].name);
