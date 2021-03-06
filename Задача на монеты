@@ -1,0 +1,16 @@
+var coinCombo = function(cents) {
+  const coins = [25,10,5,1];
+  const result = [];
+  for (let i = 0; i < coins.length; i ++) {
+    let coin = coins[i];
+      console.log(`cents=${cents}`);
+      let count = Math.trunc(cents /coin)
+      cents -= coin * count;
+      result.unshift(count);
+      
+      console.log(`cents=${cents} count= ${count}`);
+  }
+    return result;
+}
+
+console.log(coinCombo(59))
