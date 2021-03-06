@@ -10,3 +10,6 @@ Examples:
 
 const solve = arr => arr.find(el => !arr.includes(-el));
 
+function solve(arr){
+  return arr.find(el => !arr.includes(-el));
+};
