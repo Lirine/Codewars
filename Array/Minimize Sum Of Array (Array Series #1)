@@ -1,0 +1,10 @@
+//Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+function minSum(arr) {
+  arr = arr.sort((a,b) => a - b);
+  let result = 0;
+  for (let i = 0; i < arr.length/2; i++) {
+    let temp = arr[i] * arr[arr.length - 1 - i]; 
+    result = result + temp;
+  }
+  return result;
+}
