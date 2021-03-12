@@ -1,0 +1,10 @@
+function minimumSteps(numbers, value){
+  numbers = numbers.sort((a, b) => a - b);
+  let sum = 0;
+  let count = 0;
+  for (el of numbers) {
+    sum = sum + el;
+    if (sum < value) count ++;
+  }
+  return count;
+}
