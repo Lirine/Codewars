@@ -1,0 +1,7 @@
+function sumOrProduct(array, n) {
+  array = array.sort((a, b) => a - b);
+   
+  let product = array.slice(0, n).reduce((x, y) => x * y, 1);
+  let sum = array.slice(-n).reduce((x,y) => x + y, 0);
+  return product > sum ? 'product' : product === sum ? 'same' : 'sum';  
+}
