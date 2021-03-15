@@ -1,0 +1,60 @@
+/*function numericalTriangle(n){
+  let s = '';
+  for(let i =1; i <= n; i++) {
+    for(let j = 1; j <= i; j ++) {//количество чисел в строке
+       s += i + ' ';//1_1_1_1_1_  \n надо убрать последний пробел
+      }
+    s=s.slice(0,-1); //delete the last symbol
+    s = s + '\n'
+    }
+  return s.slice(0,-1);
+  }
+  
+console.log(numericalTriangle(5));
+*/
+
+/*function numericalTriangle(n){
+  let s = '';
+  for(let i = 1; i <=n; i++){
+    s += (i + ' ').repeat(i).slice(0,-1) + '\n';
+    //число повтроренное столько раз, сколько само число
+    //i transform to string 
+  }
+  return s.slice(0,-1);//поднимает кавычку на последнюю строку
+}
+console.log(numericalTriangle(5));
+*/
+
+//let s = 'a';
+//console.log(s.repeat(5));
+//console.log((s + ' ').repeat(5));
+
+/*function starTriangle(n){
+  let s = '';
+  for(let i = 1; i <=n; i++){
+    s += ('*').repeat(i) + '\n';
+    //число повтроренное столько раз, сколько само число
+    //i transform to string 
+  }
+  return s.slice(0,-1);//поднимает кавычку на последнюю строку
+}
+console.log(starTriangle(8));
+*/
+
+function numericalTable(n){
+  let str = '';
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= 5; j++) {
+      str += (i + ' ');
+    }
+    str = str + '\n';
+  }
+  return str;
+}
+
+console.log(numericalTable(4));
+// slice() method
+let s = 'abcdefg';
+console.log(s.slice());
+console.log(s.slice(0,-1));
+console.log(s.slice(2));
