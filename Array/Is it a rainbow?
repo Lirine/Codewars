@@ -1,0 +1,4 @@
+function sortRainbow(colour){
+  const full = ['red','orange','yellow','green','blue','indigo','violet'];
+  return colour.length === full.length && colour.every((a,b) => a === full[b]);
+}
