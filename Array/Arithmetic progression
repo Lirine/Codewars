@@ -1,0 +1,5 @@
+function arithmeticSequenceElements(a,r,n) {
+  var result = [a]
+  while (--n) result.push(a+=r);
+  return result.join(', ')
+}
