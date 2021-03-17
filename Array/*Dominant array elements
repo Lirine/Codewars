@@ -1,0 +1,4 @@
+function solve(arr){
+  let result = arr.filter((v, i, a) => [...a].splice(i + 1, a.length).every(o => v > o));
+  return result;
+}
