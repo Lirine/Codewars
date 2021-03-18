@@ -1,0 +1,4 @@
+function cutIt(arr){
+  let l = Math.min(...(arr.map(el => el.length)));
+  return arr.map(el => el.slice(0,l));
+}
