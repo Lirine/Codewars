@@ -1,0 +1,49 @@
+// my solution
+function toFreud(string) {
+  return string.length ? string.split(' ').map(el => el = 'sex').join(' ') : '';
+}
+
+const ways = [
+
+  // classic way
+  str => str.replace(/\S+/g, 'sex'),
+
+  // more consistent approach
+  str => (str.match(/\S+/g) || []).map(meaning => 'sex').join(' '),
+
+  // the insert method
+  str => str.replace(/\S+/g, 'sx').replace(/(?<=\w)(?=\w)/g, 'e'),
+
+  // the fill method (length matters)
+  str => Array((str.match(/\S+/g) || []).length).fill('sex').join(' '),
+
+  // the repeat method
+  str => 'sex '.repeat((str.match(/\S+/g) || []).length).trim(),
+
+  // join through sex method
+  str => str.split(/\S+/).join('sex'),
+
+  // only after the wedding method
+  str => str.split(/\S+/).join('wedding').replace(/\w+/g, 'sex'),
+
+  // oh i run out of words
+  str => (str.match(/\S+/g) || []).reduce(sex => `${sex} sex`, '').trim(),
+
+  // doggy style
+  (function () {
+    const NO_SEX = '';
+    return function(str) {
+      if (str === '') return NO_SEX;
+      let arr = str.split(' ');
+      let result = '';
+      for (let x of arr) result += ' sex';
+      return result.trim();
+    }
+  })() // <-- ٩(ఠ益ఠ)۶ - I don't like it © Douglas Crockford
+];
+
+// reduce function to check the correctness of each method (oh deja vu)
+const checkThemAll /* © Mylene Farmer */ = (sex, yes) =>  sex === yes ? sex : 'no sex';
+
+// let's try all those methods in a bed .. ahem .. in a row
+const toFreud = str => ways.map(fn => fn(str)).reduce(checkThemAll);
