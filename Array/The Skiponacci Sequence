@@ -1,0 +1,13 @@
+function skiponacci(n) {
+  if (n===1) return '1';
+  let arr = [1, 1];
+  let n1 = 0, n2 = 1, nextTerm;
+  nextTerm = n1 + n2;
+  while (arr.length < n) {
+    n1 = n2;
+    n2 = nextTerm;
+    nextTerm = n1 + n2;
+    arr.push(nextTerm); 
+  }
+  return arr.map((el,i) => i % 2 === 1 ? el = 'skip': el).join(' ');
+}
