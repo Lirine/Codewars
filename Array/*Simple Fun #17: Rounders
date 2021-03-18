@@ -1,0 +1,19 @@
+function rounders(value) {
+  let l = (value + '').length - 1;
+  let m = 10;
+  for (i = 0; i < l; i++) {
+    let r = (10 * (value % m)) / m;
+    if (r < 5) {
+      value -= (m * r) / 10;
+    } else {
+      value += (m * (10 - r)) / 10;
+    }
+    m *= 10;
+  }
+  return value;
+}
+
+
+function rounders(value, e=1) {
+  return value<10 ? value*e : rounders(Math.round(value/10), e*10)
+}
