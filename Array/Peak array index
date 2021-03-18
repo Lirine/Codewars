@@ -1,0 +1,9 @@
+function peak(arr){
+  let result = -1;
+  for (let i = 1; i < arr.length-1; i++) {
+   let r = arr.slice(0,i).reduce((acc,cur) => acc + cur);
+   let l = arr.slice(i+1).reduce((acc,cur) => acc + cur);
+   if (r === l) result = i;
+  }
+  return result;
+}
