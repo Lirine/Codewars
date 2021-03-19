@@ -1,3 +1,7 @@
 function insertSpaces(str){
   return str.split('').map(x => x + ' ').join('').slice(0,-1);  
 }
+
+function insertSpaces(str){
+  return str.split('').join(' ');
+}
