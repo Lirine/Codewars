@@ -1,1 +1,9 @@
-
+function switcher(x){
+  let abc = ' zyxwvutsrqponmlkjihgfedcba!? ';
+  let str = '';
+  for (let i = 0; i < x.length; i++) {
+    x[i] === abc[x[i]];
+    str = str + abc[x[i]];
+  }
+  return str;
+}
