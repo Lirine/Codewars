@@ -1,0 +1,12 @@
+function lowercaseCount(str){
+  let count = 0;
+  for (el of str) {
+    if (/[a-z]/g.test(el)) count++;
+  }
+  return count;
+}
+
+function lowercaseCount(str){
+  let arr = str.match(/[a-z]/g);
+  return !arr ? 0 : arr.length;
+}
