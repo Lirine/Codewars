@@ -7,3 +7,8 @@ function switcher(x){
   }
   return str;
 }
+
+function switcher(x){
+  let abc = ' zyxwvutsrqponmlkjihgfedcba!? ';
+  return x.map((el,i) => el = abc[el]).join('');
+}
