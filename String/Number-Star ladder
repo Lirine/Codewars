@@ -1,0 +1,7 @@
+function pattern(n){
+  str = "1\n";
+  for (let i = 1; i < n; i++) {
+    str = str + 1 + '*'.repeat(i) + (i+1) + '\n';
+  }
+  return str.slice(0,-1);
+}
