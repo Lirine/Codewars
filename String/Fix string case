@@ -1,0 +1,14 @@
+function solve(s){
+  console.log(s)
+  let lower = ''
+  let upper = ''
+ 
+  for (el of s) {
+    if (el === el.toLowerCase()) {
+    lower = lower  + el;
+    } else {
+    upper = upper + el;
+    }
+  }
+  return lower.length >= upper.length? s.toLowerCase() : s.toUpperCase();
+}
