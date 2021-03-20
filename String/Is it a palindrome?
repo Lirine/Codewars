@@ -1,0 +1,12 @@
+function isPalindrome(x) {
+  x = x.toLowerCase();
+  let str = '';
+  for (let i = 0; i < x.length; i++) {
+    str = x[i] + str;
+  }  
+  return x === str;
+}
+
+function isPalindrome(x) {
+  return x.toLowerCase() === x.toLowerCase().split('').reverse().join('');
+}
