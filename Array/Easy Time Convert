@@ -1,0 +1,5 @@
+function timeConvert(num) { 
+  let hours = Math.trunc(num / 60) +''
+  let min = num % 60 + '';
+  return min < 0 ? '00:00' : `${hours.padStart(2,'0')}:${min.padStart(2,0)}` 
+}
