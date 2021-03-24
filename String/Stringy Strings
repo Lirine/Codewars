@@ -1,0 +1,6 @@
+function stringy(size) {
+ return '10'.repeat(size).slice(0,size);
+}
+
+
+const stringy = x => ''.padStart(x,'10');
