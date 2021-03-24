@@ -1,0 +1,9 @@
+function sabb(s, val, happiness){
+  s = s.toLowerCase();
+  let word = ['s','a','b','t','i','c','l'];
+  let count = 0;
+  for (el of s) {
+    if (word.includes(el)) count++;
+  }
+  return count + val + happiness > 22 ? 'Sabbatical! Boom!' : 'Back to your desk, boy.';
+}
