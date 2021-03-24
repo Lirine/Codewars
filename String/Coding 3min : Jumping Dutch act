@@ -1,0 +1,3 @@
+function sc(floor){
+  return floor < 2 ? '': floor < 7 ? 'Aa~ '.repeat(floor-1) + 'Pa!' + ' Aa!' : 'Aa~ '.repeat(floor-1) + 'Pa!';
+}
