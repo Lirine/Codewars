@@ -1,0 +1,11 @@
+// не я решала 
+function findUnique(arr) {
+  let obj = {}
+  for (let  el of arr){
+    if (el in obj) obj[el]++
+    else obj[el] = 1
+  }
+  for (let key in obj){
+    if (obj[key]=== 1) return +key
+  }
+}
