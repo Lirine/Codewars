@@ -1,0 +1,8 @@
+function wordsToMarks(string){
+  let abc = "abcdefghijklmnopqrstuvwxyz";
+  let result = 0;
+  for (el of string) {
+    result += abc.indexOf(el) + 1;
+  }
+  return result;
+}
