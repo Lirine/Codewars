@@ -1,0 +1,9 @@
+// Larisa 
+function position(letter) {
+  return `Position of alphabet: ${letter.charCodeAt(0) - 96}`
+}
+//my
+function position(letter){
+  let abc = "abcdefghijklmnopqrstuvwxyz";
+  return `Position of alphabet: ${abc.indexOf(letter) + 1}`;
+}
