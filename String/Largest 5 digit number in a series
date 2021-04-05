@@ -1,0 +1,11 @@
+function solution(digits){
+  let biggestNumber = digits.slice(0,5);
+ 
+  for (i = 0; i < digits.length; i++) {
+    let nextNumber = digits.slice(i,5+i);
+      if (Number(nextNumber) > Number(biggestNumber)) {
+      biggestNumber = nextNumber;
+      }
+    }
+  return Number(biggestNumber);
+  
