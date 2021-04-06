@@ -1,0 +1,12 @@
+function trim(s, size) {
+  
+  let l = s.length;
+  if (l < 3) return s.slice(0,1) + '...';
+  if (l > size) return s.slice(0,size - 3) + '...'  ;
+  if (l <= size) return s;
+}
+
+
+function trim(arr, size) {
+    return arr.length <= size ? arr : arr.slice(0, arr.length > 3 ? size - 3 : size) + '...'
+}
