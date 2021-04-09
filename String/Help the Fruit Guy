@@ -1,0 +1,3 @@
+function removeRotten(bagOfFruits){
+  return Array.isArray(bagOfFruits) ? bagOfFruits.map(el => el.toLowerCase().replace('rotten','')) : [];
+}
