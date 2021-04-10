@@ -1,0 +1,5 @@
+function CalculateString( n,  nums) {
+  let o = nums.split('').filter(el => el === '1').length;
+  let z = nums.split('').filter(el => el === '0').length;
+  return o - z === 0 ? n - o - z: n - Math.min(o,z)*2;
+}
