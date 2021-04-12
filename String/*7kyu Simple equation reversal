@@ -1,0 +1,18 @@
+function solve(eq){
+  let result = '';
+  for (let i=0; i<eq.length;i++) {
+    if (eq[i] === '+' || 
+        eq[i] === '-' || 
+        eq[i] === '/' ||
+        eq[i] === '*') {
+      result = result + ' '+eq[i]+' '
+    } else {
+      result = result + eq[i];
+   }
+ } 
+  return result.split(' ').reverse().join('');
+}
+
+function solve(eq){
+  return eq.split(/([*\+\-\/])/).reverse().join('');
+}
