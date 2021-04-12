@@ -1,0 +1,5 @@
+function initializeNames(name){
+  name = name.split(' ');
+  return name.map((n,i)=> i === 0 || i === name.length - 1 ? 
+  n: n[0]+'.').join(' '); 
+}
