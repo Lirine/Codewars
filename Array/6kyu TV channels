@@ -1,0 +1,11 @@
+function redarr(arr) {
+arr = arr.sort().filter((el, i) => i === arr.indexOf(el));
+return Object.assign({}, arr);
+}
+
+
+function redarr(arr) {
+ let obj = {};
+ arr.sort().filter((el,i)=>i === arr.indexOf(el)).map((el, i) => obj[i] = el);
+ return obj;
+}
