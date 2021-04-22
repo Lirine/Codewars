@@ -1,0 +1,14 @@
+function testResult(array) {
+  let av = +((array.reduce((acc,cur)=> acc + cur))/array.length).toFixed(3);
+  let obj = {
+    h:0,
+    a:0,
+    l:0,
+  }
+  for (el of array) {
+    if (el===9 || el==10) obj['h']++;
+    else if(el===7 || el===8) obj['a']++;
+    else obj['l']++;
+  }
+  return array.filter(el => el < 9).length ===0 ? [av, obj,"They did well" ]:[av, obj]
+}
