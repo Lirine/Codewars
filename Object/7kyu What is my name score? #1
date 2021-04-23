@@ -1,0 +1,10 @@
+function nameScore(name){
+  let nameU = name.toUpperCase();
+  let count = 0;
+  for (el of nameU) {
+    for (key in alpha) {
+      if (key.includes(el)) count = count + alpha[key]
+    }
+  }
+  return {[name]: count};
+}
