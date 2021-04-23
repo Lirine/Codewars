@@ -1,0 +1,14 @@
+function countLanguages(list) {
+  let obj = {};
+  for (el of list){
+    if (obj[el.language]) obj[el.language] ++;
+    else obj[el.language] = 1;
+  }
+  return obj;
+}
+
+function countLanguages(list) {
+  var count = {};
+  list.forEach(x => count[x.language] = (count[x.language] || 0) + 1);
+  return count;
+}
