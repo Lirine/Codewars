@@ -1,0 +1,9 @@
+function countLetters(str){
+  str = str.split(' ').join('').toLowerCase();
+  let obj ={};
+  for (let el of str){
+    if (obj[el]) obj[el] ++;
+    else obj[el] = 1;
+  }
+  return obj;
+}
