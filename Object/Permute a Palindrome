@@ -1,0 +1,17 @@
+function permuteAPalindrome (input) { 
+let obj = {};
+for (el of input) {
+  if (obj[el]) obj[el] ++;
+  else obj[el] = 1;
+}
+  let odd = 0
+  for (key in obj) {
+     if (obj[key] % 2 === 1) odd ++;
+  }
+  return input.length < 3 ? true : odd <= 1 ? true : false;
+}
+
+function permuteAPalindrome ([...input], odd = 0) { 
+  new Set(input).forEach(a => input.filter(b => b == a).length % 2 ? odd++ : 0)
+  return odd < 2;
+}
