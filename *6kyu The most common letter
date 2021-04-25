@@ -1,0 +1,18 @@
+function replaceCommon(string, letter) {
+  str = string.replace(/\s/g, '')
+  let obj = {};
+  for (el of str) {
+    if(obj[el]) obj[el] ++
+    else obj[el]=1
+  }
+  let max = Math.max.apply(null, Object.values(obj))
+  let arr = Object.entries(obj).filter(el => el[1] === max)
+  let l = arr[0][0]
+    return string.split(l).join(letter)
+}
+
+function replaceCommon(str, letter) {
+    var $ = Array.from(x=[...new Set(str.replace(/ /g,"").split(""))], _=>str.split(_).length);
+    return str.replace(new RegExp(x[$.indexOf(Math.max(...$))],"g"), letter);
+}
+
